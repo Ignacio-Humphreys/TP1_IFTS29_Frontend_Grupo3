@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipo G.O.O.D — Portada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-bar">
+    <span class="brand">G.O.O.D<span>_TEAM</span></span>
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="has-submenu">
+          <button class="nav-link submenu-toggle" aria-expanded="false" aria-haspopup="true">
+            Perfiles <span class="caret">▾</span>
+          </button>
+          <ul class="submenu">
+            <li><a href="perfil-humphreys.html">Ignacio Humphreys</a></li>
+            <li><a href="perfil-diaz.html">Lihue Anker Díaz</a></li>
+            <li><a href="perfil-frias.html">Cristel Frías</a></li>
+            <li><a href="perfil-de-diego.html">Lucas De Diego</a></li>
+            <li><a href="perfil-giordano.html">Sebastian Giordano Rodriguez</a></li>
+          </ul>
+        </li>
+        <li><a href="bitacora.html">Bitácora</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <h1>Grupo N°3 -<span> G.O.O.D_TEAM</span></h1>
+    <p class="lead">[COMPLETAR: nombre definitivo del equipo] — Trabajo Práctico 1 de Tecnologías de la Comunicación, un sitio hecho entre las cinco personas del grupo.</p>
+  </section>
+
+  <section class="purpose-box">
+    <h2 class="section-title">Propósito del equipo</h2>
+    <p>[COMPLETAR: describir en 2-3 líneas qué los une como grupo y qué buscan lograr con este TP y los siguientes: mostrar quiénes son, practicar HTML/CSS/JS en conjunto y coordinar como equipo de trabajo.]</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Integrantes</h2>
+
+    <div class="log-filter">
+      <input
+        type="text"
+        id="buscador-equipo"
+        placeholder="Buscar por nombre o habilidad (ej: Python, diseño, SQL)..."
+        oninput="filtrarIntegrantes()"
+      >
+    </div>
+    <p id="contador-resultados" style="color:var(--text-muted); margin-bottom:18px; font-size:0.9rem;">
+      Mostrando los 5 integrantes del equipo
+    </p>
+
+    <div class="team-grid">
+
+      <article class="member-card" data-search="humphreys ignacio tomás python bigquery power bi automatización">
+        <div class="avatar">IH</div>
+        <div class="info">
+          <h3>Ignacio Tomás Humphreys</h3>
+          <p class="role">GitHub: <a href="https://github.com/Ignacio-Humphreys" target="_blank" rel="noopener">Ignacio-Humphreys</a></p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="perfil-humphreys.html">Ver perfil</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="member-card" data-search="díaz diaz [completar habilidades]">
+        <div class="avatar">D</div>
+        <div class="info">
+          <h3>Lihue Anker Díaz</h3>
+          <p class="role">GitHub: <a href="https://github.com/AnkerYeray" target="_blank" rel="noopener">AnkerYeray</a></p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="perfil-diaz.html">Ver perfil</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="member-card" data-search="frías frias [completar habilidades]">
+        <div class="avatar">F</div>
+        <div class="info">
+          <h3>Cristel Nazarena Frías</h3>
+          <p class="role">GitHub: <a href="#" target="_blank" rel="noopener">[COMPLETAR enlace]</a></p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="perfil-frias.html">Ver perfil</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="member-card" data-search="de diego [completar habilidades]">
+        <div class="avatar">DD</div>
+        <div class="info">
+          <h3>Lucas Federico De Diego</h3>
+          <p class="role">GitHub: <a href="https://github.com/lucasfedericodd" target="_blank" rel="noopener">lucasfedericodd</a></p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="perfil-de-diego.html">Ver perfil</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="member-card" data-search="giordano rodríguez rodriguez [completar habilidades]">
+        <div class="avatar">GR</div>
+        <div class="info">
+          <h3>David Sebastian Giordano Rodriguez</h3>
+          <p class="role">GitHub: <a href="https://github.com/Sebastian1601" target="_blank" rel="noopener">Sebastian1601</a></p>
+          <div class="card-actions">
+            <a class="btn btn-primary" href="perfil-giordano.html">Ver perfil</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="page-actions">
+    <a class="btn btn-outline" href="bitacora.html">Ver bitácora del proyecto →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    TP1 · Tecnologías de la Comunicación — Equipo de 5 integrantes · Publicado con Vercel
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

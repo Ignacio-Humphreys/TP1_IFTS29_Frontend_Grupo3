@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ignacio Tomás Humphreys — Perfil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-bar">
+    <span class="brand">G.O.O.D<span>_TEAM</span></span>
+    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="has-submenu">
+          <button class="nav-link submenu-toggle" aria-expanded="false" aria-haspopup="true">
+            Perfiles <span class="caret">▾</span>
+          </button>
+          <ul class="submenu">
+            <li><a href="perfil-humphreys.html">Ignacio Humphreys</a></li>
+            <li><a href="perfil-diaz.html">Lihue Anker Díaz</a></li>
+            <li><a href="perfil-frias.html">Cristel Frías</a></li>
+            <li><a href="perfil-de-diego.html">Lucas De Diego</a></li>
+            <li><a href="perfil-giordano.html">Sebastian Giordano Rodriguez</a></li>
+          </ul>
+        </li>
+        <li><a href="bitacora.html">Bitácora</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="page-actions">
+    <a class="btn" href="index.html">← Volver a la portada</a>
+  </div>
+
+  <section class="profile-header">
+    <div class="profile-avatar">IH</div>
+    <div class="profile-meta">
+      <h1>Ignacio Tomás Humphreys</h1>
+      <p class="location">📍 [COMPLETAR ciudad] · [COMPLETAR] años</p>
+      <p class="profile-links">
+        <a href="https://github.com/Ignacio-Humphreys" target="_blank" rel="noopener">🔗 GitHub: Ignacio-Humphreys</a>
+        <span class="role-tag">[COMPLETAR: ej. Frontend / Coordinación]</span>
+      </p>
+      <div class="chip-list">
+        <span class="chip">Python</span>
+        <span class="chip">BigQuery</span>
+        <span class="chip">Power BI</span>
+        <span class="chip">Automatización</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="profile-grid">
+    <div class="info-card">
+      <h2>🎬 Películas favoritas</h2>
+      <div class="media-list">
+        <div class="media-item">
+          <div class="media-cover" style="background-image:url('img/Peliculas/La_Pistola_Desnuda.jpg')"></div>
+          <span class="media-title">La pistola desnuda (1988)</span>
+        </div>
+        <div class="media-item">
+          <div class="media-cover" style="background-image:url('img/Peliculas/Airplane.jpg')"></div>
+          <span class="media-title">Airplane! (1980)</span>
+        </div>
+        <div class="media-item">
+          <div class="media-cover" style="background-image:url('img/Peliculas/Avengers_Endgame.jpg')"></div>
+          <span class="media-title">Avengers: Endgame (2019)</span>
+        </div>
+      </div>
+    </div>
+    <div class="info-card">
+      <h2>💿 Discos favoritos</h2>
+      <div class="media-list">
+        <div class="media-item">
+          <div class="media-cover" style="background-image:url('img/Discos/Delivering_the_black.jpg')"></div>
+          <div>
+            <span class="album-name">Delivering the Black (2014)</span>
+            <span class="artist-name">Primal Fear</span>
+          </div>
+        </div>
+        <div class="media-item">
+          <div class="media-cover" style="background-image:url('img/Discos/Holy_hell.jpg')"></div>
+          <div>
+            <span class="album-name">Holy Hell (2018)</span>
+            <span class="artist-name">Architects</span>
+          </div>
+        </div>
+        <div class="media-item">
+          <div class="media-cover" style="background-image:url('img/Discos/Toxicity.jpg')"></div>
+          <div>
+            <span class="album-name">Toxicity (2001)</span>
+            <span class="artist-name">System of a Down</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2 class="section-title">Sobre mí</h2>
+    <div class="about-grid">
+      <div>
+        <h3>Hobbies</h3>
+        <div class="chip-list hobby-list">
+          <span class="chip">[COMPLETAR hobby 1]</span>
+          <span class="chip">[COMPLETAR hobby 2]</span>
+          <span class="chip">[COMPLETAR hobby 3]</span>
+        </div>
+      </div>
+      <div>
+        <h3>Algo sobre mí</h3>
+        <p>[COMPLETAR: 2-3 líneas personales]</p>
+      </div>
+      <div class="fun-fact-box">
+        <h3>Un dato random</h3>
+        <p style="color:var(--text-muted); margin-bottom:10px; font-size:0.85rem;">Función dinámica: se revela al hacer clic, sin recargar la página.</p>
+        <button class="btn btn-outline" onclick="revelarDato(this)">🎲 Revelar un dato random</button>
+        <p class="fun-fact-text" data-fact="[COMPLETAR dato random]"></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-actions">
+    <a class="btn" href="index.html">← Volver a la portada</a>
+    <a class="btn btn-primary" href="bitacora.html">Ir a la bitácora →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    TP1 · Tecnologías de la Comunicación — Perfil de Ignacio Humphreys
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/perfil.js"></script>
+</body>
+</html>
