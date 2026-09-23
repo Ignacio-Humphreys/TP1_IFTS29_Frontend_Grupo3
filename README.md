@@ -9,10 +9,10 @@ Sitio web de presentación del equipo para el Trabajo Práctico 1 de la materia 
 | Nombre | GitHub |
 |---|---|
 | Ignacio Tomás Humphreys | [github.com/Ignacio-Humphreys](https://github.com/Ignacio-Humphreys) |
-| Díaz | [COMPLETAR enlace de GitHub] |
-| Frías | [COMPLETAR enlace de GitHub] |
-| De Diego | [COMPLETAR enlace de GitHub] |
-| Giordano Rodríguez | [COMPLETAR enlace de GitHub] |
+| Díaz | [github.com/AnkerYeray](https://github.com/AnkerYeray) |
+| Frías | [github.com/CristelFrias](https://github.com/CristelFrias) |
+| De Diego | [github.com/lucasfedericodd](https://github.com/lucasfedericodd) |
+| Giordano Rodríguez | [github.com/Sebastian1601](https://github.com/Sebastian1601) |
 
 ## Tecnologías utilizadas
 
