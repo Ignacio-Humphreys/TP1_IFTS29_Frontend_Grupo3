@@ -66,6 +66,7 @@ Sitio web de presentación del equipo para el Trabajo Práctico 1 de la materia 
 ### Portada (`index.html` + `js/main.js`)
 
 - **Menú hamburguesa responsive**: por debajo de los 900px el menú de navegación se colapsa detrás de un botón ☰ que lo despliega/oculta (`hamburger.addEventListener('click', ...)`).
+- **Modo claro / oscuro** (presente en todas las páginas, `js/main.js`): un botón 🌙/☀️ alterna el atributo `data-theme="dark"` en `<html>`, que sobreescribe las variables CSS de color. La preferencia se guarda en `localStorage` y, si el usuario nunca la cambió, se respeta `prefers-color-scheme` del sistema. Un pequeño script inline en el `<head>` de cada página aplica el tema guardado antes de pintar, para evitar el parpadeo (flash) del tema por defecto.
 - **Buscador dinámico de integrantes** (`filtrarIntegrantes()`): a medida que se escribe en el campo de búsqueda, filtra en vivo las tarjetas de integrantes por nombre o habilidad, y actualiza un contador de resultados. No recarga la página ni depende de un botón de "buscar".
 
 [COMPLETAR: agregar captura de pantalla del buscador en acción]

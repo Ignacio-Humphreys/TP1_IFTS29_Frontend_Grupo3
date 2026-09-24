@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<script>
+(function () {
+  var t = localStorage.getItem('theme');
+  if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bitácora — Equipo TCOM</title>
@@ -13,8 +21,8 @@
 <header class="site-header">
   <div class="nav-bar">
     <span class="brand">Equipo<span>.TCOM</span></span>
-    <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
-    <nav class="main-nav">
+    <div class="nav-right">
+      <nav class="main-nav">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li class="has-submenu">
@@ -31,7 +39,9 @@
         </li>
         <li><a href="bitacora.html">Bitácora</a></li>
       </ul>
-    </nav>
+    </nav><button class="theme-toggle" aria-label="Cambiar a modo oscuro">🌙</button>
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+    </div>
   </div>
 </header>
 

@@ -46,7 +46,31 @@ document.addEventListener('DOMContentLoaded', () => {
       submenuToggle.setAttribute('aria-expanded', 'false');
     });
   }
+
+  // --- Modo claro / oscuro ---
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    actualizarIconoTema(themeToggle);
+    themeToggle.addEventListener('click', () => {
+      const actual = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const nuevo = actual === 'dark' ? 'light' : 'dark';
+
+      if (nuevo === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      localStorage.setItem('theme', nuevo);
+      actualizarIconoTema(themeToggle);
+    });
+  }
 });
+
+function actualizarIconoTema(boton) {
+  const esOscuro = document.documentElement.getAttribute('data-theme') === 'dark';
+  boton.textContent = esOscuro ? '☀️' : '🌙';
+  boton.setAttribute('aria-label', esOscuro ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+}
 
 // ============================================================
 // INTERACCIÓN DINÁMICA DE LA PORTADA

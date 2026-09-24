@@ -1,11 +1,29 @@
 /* =========================================================
    TP1 Frontend — Equipo
-   Paleta: #0f172a (fondo oscuro), #6d5efc (violeta), #22d3ee (cian),
-           #f8fafc (texto claro), #94a3b8 (texto secundario)
+   Tema claro (por defecto) y tema oscuro vía [data-theme="dark"]
+   Violeta: #6d5efc | Cian/acento: #22d3ee (oscuro) / #0891a8 (claro)
    Tipografías: 'Space Grotesk' (títulos), 'Inter' (texto)
    ========================================================= */
 
 :root {
+  --bg: #f4f6fb;
+  --bg-soft: #e9edf6;
+  --card: #ffffff;
+  --primary: #6d5efc;
+  --primary-dark: #5747e0;
+  --accent: #0891a8;
+  --text: #101728;
+  --text-muted: #5b6780;
+  --border: #dbe1ef;
+  --radius: 14px;
+  --max-width: 1200px;
+  --font-title: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --shadow-color: rgba(15, 23, 42, 0.12);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
   --bg: #0f172a;
   --bg-soft: #16213a;
   --card: #1b2a4a;
@@ -15,11 +33,13 @@
   --text: #f8fafc;
   --text-muted: #94a3b8;
   --border: #2a3a5c;
-  --radius: 14px;
-  --max-width: 1200px;
-  --font-title: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
 }
+
+body { transition: background-color 0.25s, color 0.25s; }
+.site-header, .card, .info-card, .member-card, .about-section,
+.log-entry, ul.submenu { transition: background-color 0.25s, border-color 0.25s; }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -145,7 +165,7 @@ ul.submenu {
   border-radius: 10px;
   min-width: 230px;
   padding: 8px;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 14px 30px var(--shadow-color);
   opacity: 0;
   visibility: hidden;
   transform: translateY(6px);
@@ -186,6 +206,34 @@ ul.submenu a:hover {
   font-size: 1.4rem;
   padding: 4px 10px;
   cursor: pointer;
+}
+
+/* ---------- Toggle de modo claro/oscuro ---------- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  color: var(--text);
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  transform: rotate(15deg);
+}
+
+.nav-bar .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 /* ---------- Botonera de navegación interna (evita depender del navegador) ---------- */
