@@ -382,6 +382,15 @@ ul.submenu a:hover {
   color: #fff;
   flex-shrink: 0;
   border: 4px solid var(--card);
+  overflow: hidden;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .profile-meta h1 { font-size: 2rem; margin-bottom: 6px; }
@@ -629,4 +638,48 @@ footer.site-footer {
   .hero { padding: 36px 0 24px; }
   .page-actions { justify-content: center; }
   .nav-bar .brand { font-size: 1rem; }
+}
+
+/* =========================================================
+   PERFIL PERSONALIZADO — Ignacio Humphreys
+   ========================================================= */
+
+body.perfil-ignacio {
+  --accent: #16a34a; /* highlights en verde en modo claro */
+}
+
+html[data-theme="dark"] body.perfil-ignacio {
+  --bg: #0a0a0a;
+  --bg-soft: #131313;
+  --card: #161616;
+  --primary: #dc2626;
+  --primary-dark: #991b1b;
+  --accent: #ef4444;
+  --text: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --border: #2c2c2c;
+  --shadow-color: rgba(0, 0, 0, 0.65);
+}
+
+body.perfil-ignacio .btn,
+body.perfil-ignacio .chip,
+body.perfil-ignacio .role-tag,
+body.perfil-ignacio .info-card,
+body.perfil-ignacio .about-section,
+body.perfil-ignacio .media-cover {
+  border-radius: 0;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+body.perfil-ignacio .profile-avatar {
+  border-radius: 0;
+  clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+}
+
+body.perfil-ignacio .fun-fact-text {
+  border-left-color: var(--primary);
+}
+
+body.perfil-ignacio nav.main-nav a.active {
+  background: var(--primary);
 }
