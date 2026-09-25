@@ -1,157 +1,651 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<script>
-(function () {
-  var t = localStorage.getItem('theme');
-  if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
-})();
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cristel Nazarena Frías — Perfil</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cristel Nazarena Frías — Perfil</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* =====================================
+       FOTO DE PERFIL
+    ====================================== */
+
+    .profile-avatar-photo {
+      width: 170px !important;
+      height: 170px !important;
+      min-width: 170px !important;
+      min-height: 170px !important;
+
+      padding: 0 !important;
+      overflow: hidden !important;
+
+      border-radius: 50% !important;
+
+      flex-shrink: 0 !important;
+    }
+
+    .profile-avatar-photo img {
+      width: 100% !important;
+      height: 100% !important;
+
+      display: block !important;
+
+      object-fit: cover !important;
+      object-position: center center !important;
+    }
+
+
+    /* =====================================
+       TEXTO "ALGO SOBRE MÍ"
+       NUEVO: texto justificado
+    ====================================== */
+
+    .about-text {
+      text-align: justify;
+    }
+
+
+    /* =====================================
+       BOTONES INFERIORES
+    ====================================== */
+
+    .profile-bottom-actions {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+
+      gap: 12px !important;
+
+      width: 100% !important;
+      height: auto !important;
+
+      margin-top: 40px !important;
+      margin-bottom: 20px !important;
+    }
+
+    .profile-bottom-actions .btn {
+      display: inline-flex !important;
+
+      align-items: center !important;
+      justify-content: center !important;
+
+      width: auto !important;
+      height: auto !important;
+
+      min-width: 0 !important;
+      min-height: 0 !important;
+
+      padding: 12px 18px !important;
+
+      border-radius: 30px !important;
+
+      white-space: nowrap !important;
+
+      flex: 0 0 auto !important;
+    }
+
+  </style>
+
 </head>
+
+
 <body>
 
-<header class="site-header">
-  <div class="nav-bar">
-    <span class="brand">G.O.O.D<span>_TEAM</span></span>
-    <div class="nav-right">
+
+  <!-- =====================================
+       ENCABEZADO
+  ====================================== -->
+
+  <header class="site-header">
+
+    <div class="nav-bar">
+
+      <span class="brand">
+        G.O.O.D<span>_TEAM</span>
+      </span>
+
+      <button
+        class="hamburger"
+        aria-label="Abrir menú"
+        aria-expanded="false">
+        &#9776;
+      </button>
+
       <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li class="has-submenu">
-          <button class="nav-link submenu-toggle" aria-expanded="false" aria-haspopup="true">
-            Perfiles <span class="caret">▾</span>
+
+        <ul>
+
+          <li>
+            <a href="index.html">
+              Inicio
+            </a>
+          </li>
+
+          <li class="has-submenu">
+
+            <button
+              class="nav-link submenu-toggle"
+              aria-expanded="false"
+              aria-haspopup="true">
+
+              Perfiles
+
+              <span class="caret">
+                ▾
+              </span>
+
+            </button>
+
+
+            <ul class="submenu">
+
+              <li>
+                <a href="perfil-humphreys.html">
+                  Ignacio Humphreys
+                </a>
+              </li>
+
+              <li>
+                <a href="perfil-diaz.html">
+                  Lihue Anker Díaz
+                </a>
+              </li>
+
+              <li>
+                <a href="perfil-frias.html">
+                  Cristel Frías
+                </a>
+              </li>
+
+              <li>
+                <a href="perfil-de-diego.html">
+                  Lucas De Diego
+                </a>
+              </li>
+
+              <li>
+                <a href="perfil-giordano.html">
+                  Sebastian Giordano Rodriguez
+                </a>
+              </li>
+
+            </ul>
+
+          </li>
+
+          <li>
+            <a href="bitacora.html">
+              Bitácora
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================
+       CONTENIDO PRINCIPAL
+  ====================================== -->
+
+  <main class="container">
+
+
+    <!-- BOTÓN SUPERIOR -->
+
+    <div class="page-actions">
+
+      <a class="btn" href="index.html">
+        ← Volver a la portada
+      </a>
+
+    </div>
+
+
+
+    <!-- =====================================
+         PERFIL DE CRISTEL
+    ====================================== -->
+
+    <section class="profile-header">
+
+
+      <!-- FOTO DE PERFIL -->
+
+      <div class="profile-avatar profile-avatar-photo">
+
+        <img
+          src="img/propias/Foto perfil Frias.jpg"
+          alt="Foto de perfil de Cristel Frías">
+
+      </div>
+
+
+      <div class="profile-meta">
+
+        <h1>
+          Cristel Nazarena Frías
+        </h1>
+
+        <p class="location">
+          📍 Ciudad Autónoma de Buenos Aires · 30 años
+        </p>
+
+
+        <p class="profile-links">
+
+          <a
+            href="https://github.com/CristelFrias"
+            target="_blank"
+            rel="noopener">
+
+            🔗 GitHub: CristelFrias
+
+          </a>
+
+
+          <!-- ROL -->
+
+          <span class="role-tag">
+            Docencia / Desarrollo de Software
+          </span>
+
+        </p>
+
+
+
+        <!-- =====================================
+             HABILIDADES
+        ====================================== -->
+
+        <div class="chip-list">
+
+          <span class="chip">
+            HTML
+          </span>
+
+          <span class="chip">
+            CSS
+          </span>
+
+          <span class="chip">
+            JavaScript
+          </span>
+
+          <span class="chip">
+            Tecnologías educativas
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         PELÍCULAS Y DISCOS
+    ====================================== -->
+
+    <section class="profile-grid">
+
+
+      <!-- =====================================
+           PELÍCULAS FAVORITAS
+      ====================================== -->
+
+      <div class="info-card">
+
+        <h2>
+          🎬 Películas favoritas
+        </h2>
+
+
+        <div class="media-list">
+
+
+          <!-- PELÍCULA 1: CENICIENTA -->
+
+          <div class="media-item">
+
+            <div
+              class="media-cover"
+              style="background-image: url('img/Peliculas/Cenicienta.jpg');">
+            </div>
+
+            <span class="media-title">
+              Cenicienta (2015)
+            </span>
+
+          </div>
+
+
+
+          <!-- PELÍCULA 2: YO ANTES DE TI -->
+
+          <div class="media-item">
+
+            <div
+              class="media-cover"
+              style="background-image: url('img/Peliculas/Yo-antes-de-ti-2016.jpg');">
+            </div>
+
+            <span class="media-title">
+              Yo antes de ti (2016)
+            </span>
+
+          </div>
+
+
+
+          <!-- PELÍCULA 3: LA RAZÓN DE ESTAR CONTIGO -->
+
+          <div class="media-item">
+
+            <div
+              class="media-cover"
+              style="background-image: url('img/Peliculas/La razon de estar contigo.jpg');">
+            </div>
+
+            <span class="media-title">
+              La razón de estar contigo (2017)
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================
+           DISCOS FAVORITOS
+      ====================================== -->
+
+      <div class="info-card">
+
+        <h2>
+          💿 Discos favoritos
+        </h2>
+
+
+        <div class="media-list">
+
+
+          <!-- DISCO 1 -->
+
+          <div class="media-item">
+
+            <div
+              class="media-cover"
+              style="background-image: url('img/Discos/mejor-que-ayer.jpg');">
+            </div>
+
+            <div>
+
+              <span class="album-name">
+                Mejor que ayer (2024)
+              </span>
+
+              <span class="artist-name">
+                Diego Torres
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- DISCO 2 -->
+
+          <div class="media-item">
+
+            <div
+              class="media-cover"
+              style="background-image: url('img/Discos/No vayas a atender cuando el demonio.jpg');">
+            </div>
+
+            <div>
+
+              <span class="album-name">
+                No vayas a atender cuando el demonio llama (2025)
+              </span>
+
+              <span class="artist-name">
+                Lali Espósito
+              </span>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- DISCO 3 -->
+
+          <div class="media-item">
+
+            <div
+              class="media-cover"
+              style="background-image: url('img/Discos/un mechón de pelo.jpg');">
+            </div>
+
+            <div>
+
+              <span class="album-name">
+                Un mechón de pelo (2024)
+              </span>
+
+              <span class="artist-name">
+                Tini Stoessel
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         SOBRE MÍ
+    ====================================== -->
+
+    <section class="about-section">
+
+      <h2 class="section-title">
+        Sobre mí
+      </h2>
+
+
+      <div class="about-grid">
+
+
+        <!-- =====================================
+             HOBBIES
+        ====================================== -->
+
+        <div>
+
+          <h3>
+            Hobbies
+          </h3>
+
+
+          <div class="chip-list hobby-list">
+
+            <span class="chip">
+              🎨 Arte: diamond painting, mandalas, crochet y bordado
+            </span>
+
+            <span class="chip">
+              📚 Lectura
+            </span>
+
+            <span class="chip">
+              🎲 Juegos: de mesa y virtuales
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             ALGO SOBRE MÍ
+             MODIFICADO: texto justificado
+        ====================================== -->
+
+        <div>
+
+          <h3>
+            Algo sobre mí
+          </h3>
+
+          <p class="about-text">
+            Soy una persona creativa, curiosa y comprometida, a la que
+            le gusta aprender y enfrentar nuevos desafíos. Mi formación
+            y experiencia docente, junto con mi interés por la tecnología
+            y el desarrollo de software, me impulsan a seguir aprendiendo
+            y a buscar nuevas formas de integrar la educación con el
+            mundo digital.
+          </p>
+
+        </div>
+
+
+
+        <!-- =====================================
+             DATO RANDOM
+        ====================================== -->
+
+        <div class="fun-fact-box">
+
+          <h3>
+            Un dato random
+          </h3>
+
+
+          <p
+            style="
+              color: var(--text-muted);
+              margin-bottom: 10px;
+              font-size: 0.85rem;
+            ">
+
+            Función dinámica: se revela al hacer clic,
+            sin recargar la página.
+
+          </p>
+
+
+          <button
+            class="btn btn-outline"
+            onclick="revelarDato(this)">
+
+            🎲 Revelar un dato random
+
           </button>
-          <ul class="submenu">
-            <li><a href="perfil-humphreys.html">Ignacio Humphreys</a></li>
-            <li><a href="perfil-diaz.html">Lihue Anker Díaz</a></li>
-            <li><a href="perfil-frias.html">Cristel Frías</a></li>
-            <li><a href="perfil-de-diego.html">Lucas De Diego</a></li>
-            <li><a href="perfil-giordano.html">Sebastian Giordano Rodriguez</a></li>
-          </ul>
-        </li>
-        <li><a href="bitacora.html">Bitácora</a></li>
-      </ul>
-    </nav><button class="theme-toggle" aria-label="Cambiar a modo oscuro">🌙</button>
-      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+
+
+          <p
+            class="fun-fact-text"
+            data-fact="Mi colección de juegos de mesa crece más rápido que la cantidad de personas que tengo para jugarlos. 😂">
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         BOTONES INFERIORES
+    ====================================== -->
+
+    <div class="profile-bottom-actions">
+
+      <a
+        class="btn"
+        href="index.html">
+
+        ← Volver a la portada
+
+      </a>
+
+
+      <a
+        class="btn btn-primary"
+        href="bitacora.html">
+
+        Ir a la bitácora →
+
+      </a>
+
     </div>
-  </div>
-</header>
 
-<main class="container">
 
-  <div class="page-actions">
-    <a class="btn" href="index.html">← Volver a la portada</a>
-  </div>
+  </main>
 
-  <section class="profile-header">
-    <div class="profile-avatar">F</div>
-    <div class="profile-meta">
-      <h1>Cristel Nazarena Frías</h1>
-      <p class="location">📍 [COMPLETAR ciudad] · [COMPLETAR] años</p>
-      <p class="profile-links">
-        <a href="https://github.com/CristelFrias" target="_blank" rel="noopener">🔗 GitHub: CristelFrias</a>
-        <span class="role-tag">[COMPLETAR rol]</span>
-      </p>
-      <div class="chip-list">
-        <span class="chip">[COMPLETAR hab. 1]</span>
-        <span class="chip">[COMPLETAR hab. 2]</span>
-        <span class="chip">[COMPLETAR hab. 3]</span>
-        <span class="chip">[COMPLETAR hab. 4]</span>
-      </div>
+
+
+  <!-- =====================================
+       PIE DE PÁGINA
+  ====================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      TP1 · Tecnologías de la Comunicación —
+      Perfil de Cristel Frías
+
     </div>
-  </section>
 
-  <section class="profile-grid">
-    <div class="info-card">
-      <h2>🎬 Películas favoritas</h2>
-      <div class="media-list">
-        <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Peliculas/tu-imagen-aqui.jpg')"></div>
-          <span class="media-title">[COMPLETAR película 1]</span>
-        </div>
-        <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Peliculas/tu-imagen-aqui.jpg')"></div>
-          <span class="media-title">[COMPLETAR película 2]</span>
-        </div>
-        <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Peliculas/tu-imagen-aqui.jpg')"></div>
-          <span class="media-title">[COMPLETAR película 3]</span>
-        </div>
-      </div>
-    </div>
-    <div class="info-card">
-      <h2>💿 Discos favoritos</h2>
-      <div class="media-list">
-        <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Discos/tu-imagen-aqui.jpg')"></div>
-          <div>
-            <span class="album-name">[COMPLETAR disco 1]</span>
-            <span class="artist-name">[COMPLETAR artista 1]</span>
-          </div>
-        </div>
-        <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Discos/tu-imagen-aqui.jpg')"></div>
-          <div>
-            <span class="album-name">[COMPLETAR disco 2]</span>
-            <span class="artist-name">[COMPLETAR artista 2]</span>
-          </div>
-        </div>
-        <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Discos/tu-imagen-aqui.jpg')"></div>
-          <div>
-            <span class="album-name">[COMPLETAR disco 3]</span>
-            <span class="artist-name">[COMPLETAR artista 3]</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </footer>
 
-  <section class="about-section">
-    <h2 class="section-title">Sobre mí</h2>
-    <div class="about-grid">
-      <div>
-        <h3>Hobbies</h3>
-        <div class="chip-list hobby-list">
-          <span class="chip">[COMPLETAR hobby 1]</span>
-          <span class="chip">[COMPLETAR hobby 2]</span>
-          <span class="chip">[COMPLETAR hobby 3]</span>
-        </div>
-      </div>
-      <div>
-        <h3>Algo sobre mí</h3>
-        <p>[COMPLETAR: 2-3 líneas personales]</p>
-      </div>
-      <div class="fun-fact-box">
-        <h3>Un dato random</h3>
-        <button class="btn btn-outline" onclick="revelarDato(this)">🎲 Revelar un dato random</button>
-        <p class="fun-fact-text" data-fact="[COMPLETAR dato random]"></p>
-      </div>
-    </div>
-  </section>
 
-  <div class="page-actions">
-    <a class="btn" href="index.html">← Volver a la portada</a>
-    <a class="btn btn-primary" href="bitacora.html">Ir a la bitácora →</a>
-  </div>
 
-</main>
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
 
-<footer class="site-footer">
-  <div class="container">
-    TP1 · Tecnologías de la Comunicación — Perfil de Cristel Frías
-  </div>
-</footer>
+  <script src="js/main.js"></script>
+  <script src="js/perfil.js"></script>
 
-<script src="js/main.js"></script>
-<script src="js/perfil.js"></script>
+
 </body>
+
 </html>
