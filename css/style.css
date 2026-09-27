@@ -1,10 +1,3 @@
-/* =========================================================
-   TP1 Frontend — Equipo
-   Tema claro (por defecto) y tema oscuro vía [data-theme="dark"]
-   Violeta: #6d5efc | Cian/acento: #22d3ee (oscuro) / #0891a8 (claro)
-   Tipografías: 'Space Grotesk' (títulos), 'Inter' (texto)
-   ========================================================= */
-
 :root {
   --bg: #f4f6fb;
   --bg-soft: #e9edf6;
@@ -100,7 +93,7 @@ h4 {
   padding: 0 20px;
 }
 
-/* ---------- Header / navegación ---------- */
+/*  Header / navegación  */
 header.site-header {
   background: var(--bg-soft);
   border-bottom: 1px solid var(--border);
@@ -167,7 +160,7 @@ nav.main-nav a.active {
   color: #fff;
 }
 
-/* ---------- Submenú "Perfiles" (dropdown) ---------- */
+/*  Dropdown perfiles  */
 li.has-submenu {
   position: relative;
 }
@@ -206,7 +199,6 @@ ul.submenu {
   z-index: 60;
 }
 
-/* Desktop: se abre al pasar el mouse por encima */
 li.has-submenu:hover ul.submenu,
 li.has-submenu.open ul.submenu {
   opacity: 1;
@@ -243,7 +235,7 @@ ul.submenu a:hover {
   cursor: pointer;
 }
 
-/* ---------- Toggle de modo claro/oscuro ---------- */
+/*  Darkmode  */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -271,7 +263,7 @@ ul.submenu a:hover {
   gap: 14px;
 }
 
-/* ---------- Botonera de navegación interna (evita depender del navegador) ---------- */
+/*  Botonera de navegación interna  */
 .page-actions {
   display: flex;
   gap: 12px;
@@ -310,7 +302,7 @@ ul.submenu a:hover {
   color: var(--accent);
 }
 
-/* ---------- Hero / portada ---------- */
+/*  Portada  */
 .hero {
   padding: 60px 0 40px;
   text-align: center;
@@ -340,7 +332,7 @@ ul.submenu a:hover {
   margin: 36px 0;
 }
 
-/* ---------- Grid de integrantes ---------- */
+/*  Grid de integrantes  */
 .section-title {
   font-size: 1.5rem;
   margin: 10px 0 24px;
@@ -428,7 +420,7 @@ ul.submenu a:hover {
   font-size: 0.82rem;
 }
 
-/* ---------- Página de perfil ---------- */
+/*  Página de perfil  */
 .profile-header {
   display: flex;
   gap: 30px;
@@ -511,7 +503,6 @@ ul.submenu a:hover {
   list-style: none;
 }
 
-/* ---------- Enlaces del perfil (GitHub + rol), entre ubicación y habilidades ---------- */
 .profile-links {
   display: flex;
   align-items: center;
@@ -535,7 +526,7 @@ ul.submenu a:hover {
   font-size: 0.82rem;
 }
 
-/* ---------- Películas / Discos con portada ---------- */
+/*  Películas / Discos con portada  */
 .media-list {
   display: flex;
   flex-direction: column;
@@ -564,7 +555,6 @@ ul.submenu a:hover {
   color: var(--text);
 }
 
-/* Disco: nombre del álbum destacado en acento, artista más chico y apagado debajo */
 .media-item .album-name {
   display: block;
   font-size: 0.95rem;
@@ -580,7 +570,7 @@ ul.submenu a:hover {
   margin-top: 2px;
 }
 
-/* ---------- Sección "Sobre mí" (personalización de cada perfil) ---------- */
+/*  Sección "Sobre mí" (personalización de cada perfil)  */
 .about-section {
   background: var(--card);
   border: 1px solid var(--border);
@@ -612,7 +602,7 @@ ul.submenu a:hover {
   color: var(--text);
 }
 
-/* Dato random: interacción dinámica de cada perfil (se revela con un clic) */
+/* Dato random en perfiles */
 .fun-fact-box {
   grid-column: 1 / -1;
   margin-top: 4px;
@@ -631,7 +621,7 @@ ul.submenu a:hover {
   display: block;
 }
 
-/* ---------- Bitácora ---------- */
+/*  Bitácora  */
 .log-entry {
   background: var(--card);
   border: 1px solid var(--border);
@@ -659,7 +649,7 @@ ul.submenu a:hover {
   color: var(--text-muted);
 }
 
-/* ---------- Buscador de bitácora (JS dinámico) ---------- */
+/*  Buscador de bitácora  */
 .log-filter {
   margin: 30px 0 20px;
   display: flex;
@@ -678,7 +668,7 @@ ul.submenu a:hover {
   font-family: var(--font-body);
 }
 
-/* ---------- Footer ---------- */
+/*  Footer  */
 footer.site-footer {
   margin-top: auto;
   border-top: 1px solid var(--border);
@@ -689,10 +679,10 @@ footer.site-footer {
 }
 
 /* =========================================================
-   BREAKPOINTS OBLIGATORIOS: 400px / 900px / 1200px
+   BREAKPOINTS MOBILE: 400px / 900px / 1200px
    ========================================================= */
 
-/* < 900px: tablet — 2 columnas */
+
 @media (max-width: 900px) {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -716,6 +706,7 @@ footer.site-footer {
     left: 0;
     padding: 10px 20px 16px;
     border-bottom: 1px solid var(--border);
+    z-index: 55;
   }
 
   nav.main-nav ul.open {
@@ -730,22 +721,22 @@ footer.site-footer {
     position: relative;
   }
 
-  /* Dentro del menú colapsado, el submenú se muestra en línea (acordeón), no flotante */
   ul.submenu {
-    position: static;
+    position: static !important;
     display: none;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    border: none;
-    background: rgba(0, 0, 0, 0.15);
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: rgba(0, 0, 0, 0.15) !important;
     margin-top: 4px;
     min-width: 0;
+    width: 100%;
   }
 
   li.has-submenu.open ul.submenu {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
   }
 
@@ -755,11 +746,11 @@ footer.site-footer {
 
   /* anula el hover en touch */
   li.has-submenu.open:hover ul.submenu {
-    display: flex;
+    display: flex !important;
   }
 }
 
-/* < 400px: mobile — 1 columna, todo apilado */
+
 @media (max-width: 400px) {
   .team-grid {
     grid-template-columns: 1fr;
@@ -892,25 +883,25 @@ html[data-theme="dark"] body.perfil-lucas {
   color-scheme: dark;
 }
 
-/* Acento dorado en modo claro también */
+
 body.perfil-lucas {
   --accent: #b8900a;
   --primary: #1a5fc8;
 }
 
-/* Avatar cuadrado con borde y glow dorado */
+
 body.perfil-lucas .profile-avatar {
   border-radius: 12px;
   border-color: #F5D100;
   box-shadow: 0 0 18px 4px rgba(245, 209, 0, 0.35);
 }
 
-/* Línea de sección con dorado */
+
 body.perfil-lucas .section-title::before {
   background: var(--accent);
 }
 
-/* Chips con tono azul marino */
+
 html[data-theme="dark"] body.perfil-lucas .chip {
   background: rgba(245, 209, 0, 0.10);
   color: #F5D100;
@@ -935,31 +926,31 @@ html[data-theme="dark"] body.perfil-lucas .album-name {
   color: #F5D100;
 }
 
-/* Role tag con borde dorado suave */
+
 html[data-theme="dark"] body.perfil-lucas .role-tag {
   background: rgba(245, 209, 0, 0.08);
   border-color: rgba(245, 209, 0, 0.3);
   color: #F5D100;
 }
 
-/* Borde izquierdo del dato random en dorado */
+
 body.perfil-lucas .fun-fact-text {
   border-left-color: #F5D100;
 }
 
-/* Botón outline con acento dorado en dark */
+
 html[data-theme="dark"] body.perfil-lucas .btn-outline {
   border-color: #F5D100;
   color: #F5D100;
 }
 
-/* Info cards con sutil borde dorado al hover */
+
 html[data-theme="dark"] body.perfil-lucas .info-card:hover,
 html[data-theme="dark"] body.perfil-lucas .about-section:hover {
   border-color: rgba(245, 209, 0, 0.3);
 }
 
-/* Transición suave en cards */
+/* Transición en cards */
 html[data-theme="dark"] body.perfil-lucas .info-card,
 html[data-theme="dark"] body.perfil-lucas .about-section {
   transition: border-color 0.3s;

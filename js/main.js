@@ -1,8 +1,4 @@
-// ============================================================
-// main.js — funciones compartidas por todas las páginas
-// ============================================================
-
-// --- Menú hamburguesa (responsive, todas las páginas) ---
+// Menú hamburguesa (responsive, todas las páginas)
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const navList = document.querySelector('nav.main-nav ul');
@@ -23,13 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Si estamos en una página de perfil, resalta también el botón "Perfiles"
   if (current.startsWith('perfil-')) {
     const toggle = document.querySelector('.submenu-toggle');
     if (toggle) toggle.classList.add('active');
   }
 
-  // --- Submenú "Perfiles": clic para abrir/cerrar (funciona en mobile y desktop) ---
+  // Submenú "Perfiles"
   const submenuItem = document.querySelector('li.has-submenu');
   const submenuToggle = document.querySelector('.submenu-toggle');
 
@@ -47,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Modo claro / oscuro ---
+  // Modo claro / oscuro
   const themeToggle = document.querySelector('.theme-toggle');
   if (themeToggle) {
     actualizarIconoTema(themeToggle);
@@ -72,11 +67,7 @@ function actualizarIconoTema(boton) {
   boton.setAttribute('aria-label', esOscuro ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
 }
 
-// ============================================================
-// INTERACCIÓN DINÁMICA DE LA PORTADA
-// Buscador en vivo: filtra las tarjetas de integrantes por
-// nombre o por habilidad mientras el usuario escribe.
-// ============================================================
+// Búsqueda de integrantes del equipo en index.html
 function filtrarIntegrantes() {
   const input = document.getElementById('buscador-equipo');
   const contador = document.getElementById('contador-resultados');
