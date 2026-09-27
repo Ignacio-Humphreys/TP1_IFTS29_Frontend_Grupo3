@@ -2,7 +2,7 @@
 
 Sitio web de presentación del equipo para el Trabajo Práctico 1 de la materia Tecnologías de la Comunicación. El sitio presenta al grupo, a cada integrante individualmente y el proceso de desarrollo en una bitácora.
 
-**URL publicada (Vercel):** [COMPLETAR — https://tp1-equipo.vercel.app]
+**URL publicada (Vercel):** [\[COMPLETAR — https://tp1-equipo.vercel.app\]](https://tp-1-ifts-29-frontend-grupo3.vercel.app/)
 
 ## Integrantes
 
