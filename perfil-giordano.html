@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="perfil-sebastian">
 
 <header class="site-header">
   <div class="nav-bar">
@@ -52,19 +52,19 @@
   </div>
 
   <section class="profile-header">
-    <div class="profile-avatar">GR</div>
+    <div class="profile-avatar"><img src="./img/Propias/picaboutme.jpg" alt="Foto de Sebastian Giordano, perfil sobre mí"></div>
     <div class="profile-meta">
       <h1>David Sebastian Giordano Rodriguez</h1>
-      <p class="location">📍 [COMPLETAR ciudad] · [COMPLETAR] años</p>
+      <p class="location">📍 Tortuguitas · 43 años</p>
       <p class="profile-links">
         <a href="https://github.com/Sebastian1601" target="_blank" rel="noopener">🔗 GitHub: Sebastian1601</a>
-        <span class="role-tag">[COMPLETAR rol]</span>
+        <span class="role-tag">Backend Developer</span>
       </p>
       <div class="chip-list">
-        <span class="chip">[COMPLETAR hab. 1]</span>
-        <span class="chip">[COMPLETAR hab. 2]</span>
-        <span class="chip">[COMPLETAR hab. 3]</span>
-        <span class="chip">[COMPLETAR hab. 4]</span>
+        <span class="chip">NodeJS</span>
+        <span class="chip">C#</span>
+        <span class="chip">MySQL</span>
+        <span class="chip">Kotlin</span>
       </div>
     </div>
   </section>
@@ -74,16 +74,16 @@
       <h2>🎬 Películas favoritas</h2>
       <div class="media-list">
         <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Peliculas/tu-imagen-aqui.jpg')"></div>
-          <span class="media-title">[COMPLETAR película 1]</span>
+          <div class="media-cover" style="background-image:url('img/Peliculas/movie01.jpg')"></div>
+          <span class="media-title">Interstellar</span>
         </div>
         <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Peliculas/tu-imagen-aqui.jpg')"></div>
-          <span class="media-title">[COMPLETAR película 2]</span>
+          <div class="media-cover" style="background-image:url('img/Peliculas/movie02.jpg')"></div>
+          <span class="media-title">¿Qué le paso a Lunes?</span>
         </div>
         <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Peliculas/tu-imagen-aqui.jpg')"></div>
-          <span class="media-title">[COMPLETAR película 3]</span>
+          <div class="media-cover" style="background-image:url('img/Peliculas/movie03.jpg')"></div>
+          <span class="media-title">Terminator 2:Judgement Day</span>
         </div>
       </div>
     </div>
@@ -91,24 +91,24 @@
       <h2>💿 Discos favoritos</h2>
       <div class="media-list">
         <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Discos/tu-imagen-aqui.jpg')"></div>
+          <div class="media-cover" style="background-image:url('img/Discos/band01.jpg')"></div>
           <div>
-            <span class="album-name">[COMPLETAR disco 1]</span>
-            <span class="artist-name">[COMPLETAR artista 1]</span>
+            <span class="album-name">These Days</span>
+            <span class="artist-name">Bon Jovi</span>
           </div>
         </div>
         <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Discos/tu-imagen-aqui.jpg')"></div>
+          <div class="media-cover" style="background-image:url('img/Discos/band02.jpg')"></div>
           <div>
-            <span class="album-name">[COMPLETAR disco 2]</span>
-            <span class="artist-name">[COMPLETAR artista 2]</span>
+            <span class="album-name">Life For Rent</span>
+            <span class="artist-name">Dido</span>
           </div>
         </div>
         <div class="media-item">
-          <div class="media-cover" style="background-image:url('img/Discos/tu-imagen-aqui.jpg')"></div>
+          <div class="media-cover" style="background-image:url('img/Discos/band03.jpg')"></div>
           <div>
-            <span class="album-name">[COMPLETAR disco 3]</span>
-            <span class="artist-name">[COMPLETAR artista 3]</span>
+            <span class="album-name">The Marshall Mathers LP</span>
+            <span class="artist-name">Eminem</span>
           </div>
         </div>
       </div>
@@ -121,19 +121,19 @@
       <div>
         <h3>Hobbies</h3>
         <div class="chip-list hobby-list">
-          <span class="chip">[COMPLETAR hobby 1]</span>
-          <span class="chip">[COMPLETAR hobby 2]</span>
-          <span class="chip">[COMPLETAR hobby 3]</span>
+          <span class="chip">Hacer deportes</span>
+          <span class="chip">Ver películas</span>
+          <span class="chip">Jugar videojuegos</span>
         </div>
       </div>
       <div>
         <h3>Algo sobre mí</h3>
-        <p>[COMPLETAR: 2-3 líneas personales]</p>
+        <p>Soy estudiante de Desarrollo de Software y, sobre todo, alguien que disfruta entender cómo funcionan las cosas.<br>Mi formación me llevó a explorar distintas áreas del desarrollo: desde interfaces y aplicaciones web hasta APIs, bases de datos y programación orientada a objetos. Actualmente trabajo principalmente con JavaScript, Node.js, C#, Kotlin y SQL, mientras continúo incorporando nuevas herramientas y conceptos.<br>Me interesa encontrar soluciones simples a problemas complejos, entender el porqué detrás de cada decisión técnica y transformar una idea en algo que realmente pueda funcionar.</p>
       </div>
       <div class="fun-fact-box">
         <h3>Un dato random</h3>
         <button class="btn btn-outline" onclick="revelarDato(this)">🎲 Revelar un dato random</button>
-        <p class="fun-fact-text" data-fact="[COMPLETAR dato random]"></p>
+        <p class="fun-fact-text" data-fact="Después de 10 años, todavia espero las medialunas que me prometió un cliente por la atención telefónica."></p>
       </div>
     </div>
   </section>
