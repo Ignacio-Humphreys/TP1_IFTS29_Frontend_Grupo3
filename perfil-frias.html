@@ -2,6 +2,14 @@
 <html lang="es">
 
 <head>
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -109,94 +117,31 @@
   ====================================== -->
 
   <header class="site-header">
-
     <div class="nav-bar">
-
-      <span class="brand">
-        G.O.O.D<span>_TEAM</span>
-      </span>
-
-      <button
-        class="hamburger"
-        aria-label="Abrir menú"
-        aria-expanded="false">
-        &#9776;
-      </button>
-
-      <nav class="main-nav">
-
-        <ul>
-
-          <li>
-            <a href="index.html">
-              Inicio
-            </a>
-          </li>
-
-          <li class="has-submenu">
-
-            <button
-              class="nav-link submenu-toggle"
-              aria-expanded="false"
-              aria-haspopup="true">
-
-              Perfiles
-
-              <span class="caret">
-                ▾
-              </span>
-
-            </button>
-
-
-            <ul class="submenu">
-
-              <li>
-                <a href="perfil-humphreys.html">
-                  Ignacio Humphreys
-                </a>
-              </li>
-
-              <li>
-                <a href="perfil-diaz.html">
-                  Lihue Anker Díaz
-                </a>
-              </li>
-
-              <li>
-                <a href="perfil-frias.html">
-                  Cristel Frías
-                </a>
-              </li>
-
-              <li>
-                <a href="perfil-de-diego.html">
-                  Lucas De Diego
-                </a>
-              </li>
-
-              <li>
-                <a href="perfil-giordano.html">
-                  Sebastian Giordano Rodriguez
-                </a>
-              </li>
-
-            </ul>
-
-          </li>
-
-          <li>
-            <a href="bitacora.html">
-              Bitácora
-            </a>
-          </li>
-
-        </ul>
-
-      </nav>
-
+      <span class="brand">G.O.O.D<span>_TEAM</span></span>
+      <div class="nav-right">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="has-submenu">
+              <button class="nav-link submenu-toggle" aria-expanded="false" aria-haspopup="true">
+                Perfiles <span class="caret">▾</span>
+              </button>
+              <ul class="submenu">
+                <li><a href="perfil-humphreys.html">Ignacio Humphreys</a></li>
+                <li><a href="perfil-diaz.html">Lihue Anker Díaz</a></li>
+                <li><a href="perfil-frias.html">Cristel Frías</a></li>
+                <li><a href="perfil-de-diego.html">Lucas De Diego</a></li>
+                <li><a href="perfil-giordano.html">Sebastian Giordano Rodriguez</a></li>
+              </ul>
+            </li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" aria-label="Cambiar a modo oscuro">🌙</button>
+        <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">&#9776;</button>
+      </div>
     </div>
-
   </header>
 
 
@@ -553,19 +498,6 @@
           <h3>
             Un dato random
           </h3>
-
-
-          <p
-            style="
-              color: var(--text-muted);
-              margin-bottom: 10px;
-              font-size: 0.85rem;
-            ">
-
-            Función dinámica: se revela al hacer clic,
-            sin recargar la página.
-
-          </p>
 
 
           <button
