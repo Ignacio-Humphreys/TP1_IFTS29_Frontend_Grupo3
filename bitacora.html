@@ -52,18 +52,18 @@
   </div>
 
   <h1 style="margin:30px 0 8px;">Bitácora de desarrollo</h1>
-  <p style="color:var(--text-muted); margin-bottom:30px;">Registro cronológico de las decisiones, dificultades y cambios del equipo durante el TP1. [COMPLETAR con entradas reales a medida que avanza el trabajo.]</p>
+  <p style="color:var(--text-muted); margin-bottom:30px;">Registro cronológico de las decisiones, dificultades y cambios del equipo durante el desarrollo del TP1.</p>
 
   <div class="log-entry">
-    <span class="log-date">[COMPLETAR fecha]</span>
+    <span class="log-date">10 de septiembre de 2026</span>
     <h3>Organización inicial del equipo</h3>
-    <p>[COMPLETAR: cómo se repartieron roles y tiempos, qué canal de comunicación usaron (WhatsApp, Discord, etc.) y qué acordaron sobre el flujo de trabajo en Git.]</p>
+    <p>Nos organizamos a través de un grupo de WhatsApp y reuniones virtuales para coordinar las pautas de la consigna. Definimos como repositorio central el creado por Ignacio en GitHub (<code>TP1_IFTS29_Frontend_Grupo3</code>). Para el flujo de trabajo acordamos que cada integrante trabaje de manera modular en su propio archivo de perfil y aporte a los archivos compartidos mediante commits y ramas, manteniendo la comunicación constante para evitar conflictos de merge.</p>
   </div>
 
   <div class="log-entry">
-    <span class="log-date">[COMPLETAR fecha]</span>
+    <span class="log-date">15 de septiembre de 2026</span>
     <h3>Definición de la estructura del sitio</h3>
-    <p>[COMPLETAR: decisión sobre la organización de archivos (index, perfiles, css/, js/, img/), y por qué eligieron esta paleta de colores y tipografías.]</p>
+    <p>Establecimos una arquitectura limpia y ordenada: <code>index.html</code>, <code>bitacora.html</code> y los perfiles individuales en la raíz del proyecto, centralizando los estilos en <code>css/style.css</code>, la lógica en <code>js/</code> (<code>main.js</code> y <code>perfil.js</code>), y los recursos multimedia en <code>img/</code> organizados en subcarpetas (<code>Discos/</code>, <code>Peliculas/</code>, <code>Propias/</code>). Elegimos una estética moderna en modo oscuro por defecto con soporte para modo claro, combinando las fuentes de Google Fonts Space Grotesk para titulares e Inter para lectura fluida.</p>
     <ul>
       <li>Paleta: #0f172a (fondo), #6d5efc (violeta primario), #22d3ee (acento cian)</li>
       <li>Tipografías: Space Grotesk (títulos) + Inter (texto), vía Google Fonts</li>
@@ -71,21 +71,21 @@
   </div>
 
   <div class="log-entry">
-    <span class="log-date">[COMPLETAR fecha]</span>
+    <span class="log-date">19 de septiembre de 2026</span>
     <h3>Dificultades encontradas</h3>
-    <p>[COMPLETAR: por ejemplo, ajustar el menú responsive en los breakpoints de 400px/900px/1200px, o coordinar los avatares/fotos de cada integrante.]</p>
+    <p>El principal desafío técnico fue la adaptabilidad del menú de navegación en pantallas chicas (&lt; 900px y &lt; 400px), donde el submenú desplegable de perfiles requirió transformarse en formato acordeón para no desbordar ni tapar la interfaz. También coordinamos la unificación visual de las fotos y portadas de películas/discos mediante <code>object-fit: cover</code> en las cards de la portada y en los perfiles para que imágenes de distintas proporciones encajaran sin deformarse, respetando a la vez las personalizaciones de estilo que cada uno quiso agregar a su perfil.</p>
   </div>
 
   <div class="log-entry">
-    <span class="log-date">[COMPLETAR fecha]</span>
+    <span class="log-date">23 de septiembre de 2026</span>
     <h3>Interactividad con JavaScript</h3>
-    <p>[COMPLETAR: cómo definieron el buscador dinámico de la portada y el widget de favoritos de cada perfil, y qué pruebas hicieron.]</p>
+    <p>Desarrollamos interactividad vanilla sin librerías externas. En la portada implementamos un buscador dinámico en tiempo real (<code>filtrarIntegrantes()</code>) que filtra al instante por nombre o habilidades comparando contra atributos <code>data-search</code> y actualizando el contador de resultados sin recargar la página. Además, en cada perfil individual sumamos la función <code>revelarDato()</code>, que descubre dinámicamente un dato random/curioso de cada integrante mediante un toggle de clases y lectura de atributos <code>data-fact</code>.</p>
   </div>
 
   <div class="log-entry">
-    <span class="log-date">[COMPLETAR fecha]</span>
+    <span class="log-date">27 de septiembre de 2026</span>
     <h3>Publicación en Vercel</h3>
-    <p>[COMPLETAR: pasos seguidos para conectar el repositorio a Vercel y la URL final publicada.]</p>
+    <p>Vinculación del repositorio público de GitHub con Vercel para despliegue continuo automático ante cada actualización en la rama principal. (URL de producción: [COMPLETAR CON LA URL DE VERCEL UNA VEZ PUBLICADO]).</p>
   </div>
 
   <div class="page-actions">
