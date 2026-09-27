@@ -1,4 +1,4 @@
-# TP1 — [COMPLETAR nombre del equipo]
+# TP1 — Grupo N°3 - G.O.O.D_TEAM
 
 Sitio web de presentación del equipo para el Trabajo Práctico 1 de la materia Tecnologías de la Comunicación. El sitio presenta al grupo, a cada integrante individualmente y el proceso de desarrollo en una bitácora.
 
